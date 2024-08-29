@@ -1,9 +1,9 @@
 {
   "coco_karpathy_train_567k": {
-    "root": "data/coco/",
-    "annotation": "data/coco/annotations/coco_karpathy_train_567k.jsonl",
+    "root": "/mnt/data01/hatto/khang/image_captioning/InternVL/internvl_chat/Vintern-7B/internvl_chat/LLaVA_Pretrain/",
+    "annotation": "/mnt/data01/hatto/khang/image_captioning/InternVL/internvl_chat/Vintern-7B/internvl_chat/train.jsonl",
     "data_augment": false,
     "repeat_time": 1,
-    "length": 566747
+    "length": 50000
   }
 }

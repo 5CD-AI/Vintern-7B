@@ -79,13 +79,23 @@ class InternVLChatModel(PreTrainedModel):
         vit_hidden_size = config.vision_config.hidden_size
         llm_hidden_size = config.llm_config.hidden_size
 
+        # self.mlp1 = nn.Sequential(
+        #     nn.LayerNorm(vit_hidden_size * int(1 / self.downsample_ratio) ** 2),
+        #     nn.Linear(vit_hidden_size * int(1 / self.downsample_ratio) ** 2, 896),
+        #     nn.GELU(),
+        #     nn.Linear(896, 896),
+        #     nn.LayerNorm(896),
+        #     nn.Linear(896, llm_hidden_size),
+        #     nn.GELU(),
+        #     nn.Linear(llm_hidden_size, llm_hidden_size)
+        # )
         self.mlp1 = nn.Sequential(
             nn.LayerNorm(vit_hidden_size * int(1 / self.downsample_ratio) ** 2),
             nn.Linear(vit_hidden_size * int(1 / self.downsample_ratio) ** 2, llm_hidden_size),
             nn.GELU(),
             nn.Linear(llm_hidden_size, llm_hidden_size)
         )
-
+        
         self.img_context_token_id = None
         self.conv_template = get_conv_template(self.template)
         if hasattr(config, 'system_message'):
@@ -118,7 +128,7 @@ class InternVLChatModel(PreTrainedModel):
             target_modules = ['mlp.down_proj', 'mlp.gate_up_proj', 'self_attn.o_proj', 'self_attn.qkv_proj']
         elif self.llm_arch_name in ['Qwen2ForCausalLM', 'LlamaForCausalLM']:
             target_modules = ['self_attn.q_proj', 'self_attn.k_proj', 'self_attn.v_proj', 'self_attn.o_proj',
-                              'mlp.gate_proj', 'mlp.down_proj', 'mlp.up_proj']
+                              'mlp.gate_proj', 'mlp.down_proj', 'mlp.up_proj','embed_tokens','lm_head']
         else:
             raise NotImplemented
         lora_config = LoraConfig(
