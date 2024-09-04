@@ -138,9 +138,12 @@ class InternVLChatModel(PreTrainedModel):
             lora_dropout=lora_dropout,
             task_type='CAUSAL_LM'
         )
+        print("="*400)
+        print(self.language_model.model.embed_tokens.weight - self.language_model.lm_head.weight)
         self.language_model = get_peft_model(self.language_model, lora_config)
         self.language_model.enable_input_require_grads()
         self.language_model.print_trainable_parameters()
+        
 
     def forward(
             self,
