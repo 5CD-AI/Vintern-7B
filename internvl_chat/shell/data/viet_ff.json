@@ -1,0 +1,9 @@
+{
+  "coco_karpathy_train_567k": {
+    "root": "/mnt/data01/hatto/khang/image_captioning/InternVL/internvl_chat/Vintern-7B/internvl_chat/",
+    "annotation": "/mnt/data01/hatto/khang/image_captioning/InternVL/internvl_chat/Vintern-7B/internvl_chat/combine_vqa/finetune.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 50000
+  }
+}

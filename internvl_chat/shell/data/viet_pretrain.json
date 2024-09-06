@@ -1,0 +1,16 @@
+{
+  "viet": {
+    "root": "/mnt/data01/hatto/khang/image_captioning/InternVL/internvl_chat/Vintern-7B/internvl_chat/",
+    "annotation": "/mnt/data01/hatto/khang/image_captioning/InternVL/internvl_chat/Vintern-7B/internvl_chat/combine_vqa/pretrain.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 50000
+  },
+ "eng": {
+    "root": "/mnt/data01/hatto/khang/image_captioning/InternVL/internvl_chat/Vintern-7B/internvl_chat/opengvlab_ShareGPT4o/opengvlab_gpt4o/",
+    "annotation": "/mnt/data01/hatto/khang/image_captioning/InternVL/internvl_chat/Vintern-7B/internvl_chat/opengvlab_ShareGPT4o/opengvlab_ShareGPT4o.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 50000
+  }
+}

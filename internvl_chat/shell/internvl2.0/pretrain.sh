@@ -1,7 +1,7 @@
 set -x
 
 GPUS=3
-BATCH_SIZE=256
+BATCH_SIZE=128
 PER_DEVICE_BATCH_SIZE=1
 GRADIENT_ACC=$((BATCH_SIZE / PER_DEVICE_BATCH_SIZE / GPUS))
 
@@ -11,7 +11,7 @@ export MASTER_PORT=34229
 export TF_CPP_MIN_LOG_LEVEL=3
 export LAUNCHER=pytorch
 
-OUTPUT_DIR='Qwen2_15B_pretrained_normalMLP'
+OUTPUT_DIR='model_outputs/Viet_Sailor_4B_Instruct_pretrained_normalMLP_vi_en'
 
 if [ ! -d "$OUTPUT_DIR" ]; then
   mkdir -p "$OUTPUT_DIR"
@@ -25,13 +25,13 @@ CUDA_VISIBLE_DEVICES=5,6,7 torchrun \
   --master_port=${MASTER_PORT} \
   internvl/train/internvl_chat_pretrain.py \
   --vision_path "/mnt/data01/hatto/khang/image_captioning/InternVL/internvl_chat/Vintern-7B/internvl_chat/InternViT_300M_448px_Vintern_1B_v3" \
-  --llm_path "/mnt/data01/hatto/khang/image_captioning/InternVL/internvl_chat/Vintern-7B/internvl_chat/Qwen2_1.5B_Instruct" \
+  --llm_path "/mnt/data01/hatto/khang/image_captioning/InternVL/internvl_chat/Vintern-7B/internvl_chat/Viet_Sailor_4B_Instruct" \
   --conv_style "Hermes-2" \
   --output_dir ${OUTPUT_DIR} \
   --meta_path "/mnt/data01/hatto/khang/image_captioning/InternVL/internvl_chat/Vintern-7B/internvl_chat/shell/data/viet_pretrain.json" \
   --overwrite_output_dir True \
   --force_image_size 448 \
-  --max_dynamic_patch 6 \
+  --max_dynamic_patch 4 \
   --down_sample_ratio 0.5 \
   --drop_path_rate 0.0 \
   --freeze_llm True \
@@ -52,7 +52,7 @@ CUDA_VISIBLE_DEVICES=5,6,7 torchrun \
   --warmup_steps 100 \
   --lr_scheduler_type "cosine" \
   --logging_steps 1 \
-  --max_seq_length 2048 \
+  --max_seq_length 1600 \
   --do_train True \
   --grad_checkpoint True \
   --group_by_length False \
