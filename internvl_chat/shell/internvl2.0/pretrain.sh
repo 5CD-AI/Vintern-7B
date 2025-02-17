@@ -24,11 +24,11 @@ CUDA_VISIBLE_DEVICES=5,6,7 torchrun \
   --nproc_per_node=${GPUS} \
   --master_port=${MASTER_PORT} \
   internvl/train/internvl_chat_pretrain.py \
-  --vision_path "/mnt/data01/hatto/khang/image_captioning/InternVL/internvl_chat/Vintern-7B/internvl_chat/InternViT_300M_448px_Vintern_1B_v3" \
-  --llm_path "/mnt/data01/hatto/khang/image_captioning/InternVL/internvl_chat/Vintern-7B/internvl_chat/Viet_Sailor_4B_Instruct" \
+  --vision_path "/Vintern-7B/internvl_chat/InternViT_300M_448px_Vintern_1B_v3" \
+  --llm_path "/Vintern-7B/internvl_chat/Viet_Sailor_4B_Instruct" \
   --conv_style "Hermes-2" \
   --output_dir ${OUTPUT_DIR} \
-  --meta_path "/mnt/data01/hatto/khang/image_captioning/InternVL/internvl_chat/Vintern-7B/internvl_chat/shell/data/viet_pretrain.json" \
+  --meta_path "/Vintern-7B/internvl_chat/shell/data/viet_pretrain.json" \
   --overwrite_output_dir True \
   --force_image_size 448 \
   --max_dynamic_patch 4 \
