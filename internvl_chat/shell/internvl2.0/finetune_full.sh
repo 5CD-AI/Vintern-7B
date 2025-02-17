@@ -33,7 +33,7 @@ CUDA_VISIBLE_DEVICES=6 torchrun \
   --model_name_or_path "Viet_Sailor_4B_Instruct_finetune_vi_en_freeze_vit" \
   --conv_style "Hermes-2" \
   --output_dir ${OUTPUT_DIR} \
-  --meta_path "/mnt/data01/hatto/khang/image_captioning/InternVL/internvl_chat/Vintern-7B/internvl_chat/shell/data/Qwen1.5B_ff_full.json" \
+  --meta_path "/Vintern-7B/internvl_chat/shell/data/Qwen1.5B_ff_full.json" \
   --overwrite_output_dir True \
   --force_image_size 448 \
   --max_dynamic_patch 4 \
