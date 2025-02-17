@@ -33,7 +33,7 @@ CUDA_VISIBLE_DEVICES=5,6 torchrun \
   --model_name_or_path "model_outputs/Viet_Sailor_4B_Instruct_pretrained_normalMLP_vi_en/checkpoint-1500" \
   --conv_style "Hermes-2" \
   --output_dir ${OUTPUT_DIR} \
-  --meta_path "/mnt/data01/hatto/khang/image_captioning/InternVL/internvl_chat/Vintern-7B/internvl_chat/shell/data/Qwen1.5B_ff_small.json" \
+  --meta_path "/Vintern-7B/internvl_chat/shell/data/Qwen1.5B_ff_small.json" \
   --overwrite_output_dir True \
   --force_image_size 448 \
   --max_dynamic_patch 4 \
