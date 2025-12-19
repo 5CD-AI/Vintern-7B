@@ -1,0 +1,9 @@
+{
+   "v2_ocr": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/dict_vocab_check/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/dict_vocab_check/viet_viettay_dict_79k.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  }
+}

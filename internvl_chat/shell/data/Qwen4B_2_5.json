@@ -1,0 +1,9 @@
+{
+    "ver_new_doc_v1": {
+    "root": "/data/llm/gg_search/Gemini_call/",
+    "annotation": "/data/llm/gg_search/Gemini_call/ver1_new_doc_train.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  }
+}

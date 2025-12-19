@@ -1,0 +1,9 @@
+{
+    "table": {
+    "root": "/data/llm/LLaMA-Factory/",
+    "annotation": "/data/llm/LLaMA-Factory/pubtable/internvl_table2html_18k.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  }
+}

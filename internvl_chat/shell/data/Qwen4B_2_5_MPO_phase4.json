@@ -1,0 +1,184 @@
+{
+    "viet_wiki_address_dict_60k": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/dict_vocab_check/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/dict_vocab_check/viet_wiki_address_dict/viet_wiki_address_dict_60k.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  },
+  "handwriting_flash2": {
+    "root": "/data/llm/gg_search/viettay_clean/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_80/handwriting_100k_flash2.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  },
+  "ocr_new": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/Doc_ocr_flash2/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/viet_ocr_doc_doc2_flash2.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  },
+  "lava_o1_cot": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/llava_cot_o1.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  },
+    "smolvl": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/HF_cauldron/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/smolvl_data_train_2kcut.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  },
+    "ver_new_doc_v1": {
+    "root": "/data/llm/gg_search/Gemini_call/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/ver1_new_doc_train.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  },
+    "viet_instruct": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/viet_visual_instructions.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  },
+   "v2_ocr": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/v2_train.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  },
+   "rerank": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/pure_text_rerank_10ksplit.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  },
+  "chat3": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/viet_sailor_pure_text_10ksplit.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 108221
+  },
+  "mc4": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/mc4_1000font_text.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 29765
+  },
+  "vietchart": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/vietchart.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 29765
+  },
+  "table_mardown": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/table_mardown.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 29765
+  },
+    "viet_local_2": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/viet_local_train.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 108221
+  },
+    "viet_laion_text": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/viet_laion_train_100k_textvqa.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 108221
+  },
+  "vietgpt4o": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/viet_gpt4o_train.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 108221
+  },
+  "onevision": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/onevision_10k_10percentage.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 108221
+  },
+   "sharegpt4v_instruct_gpt4-vision_cap100k": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/InternVL_Chat_V12_SFT_Data/10percent_data/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/ten_percent_sharegpt4v_instruct_gpt4-vision_cap100k.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 102025
+  },
+  "llava_instruct_150k_zh": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/InternVL_Chat_V12_SFT_Data/10percent_data/coco/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/ten_percent_llava_instruct_150k_zh.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 157712
+  },
+  "sharegpt4v_mix665k_cap23k_coco-ap9k_lcs3k_sam9k_div2k": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/InternVL_Chat_V12_SFT_Data/10percent_data/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/ten_percent_sharegpt4v_mix665k_cap23k_coco-ap9k_lcs3k_sam9k_div2k___10ksplit.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 665058
+  },
+  "dvqa_train_200k": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/InternVL_Chat_V12_SFT_Data/10percent_data/dvqa/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/ten_percent_dvqa_train_200k___10ksplit.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 200000
+  },
+  "chartqa_train_18k": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/InternVL_Chat_V12_SFT_Data/10percent_data/chartqa/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/ten_percent_chartqa_train_18k.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 18317
+  },
+  "ai2d_train_12k": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/InternVL_Chat_V12_SFT_Data/10percent_data/ai2d/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/ten_percent_ai2d_train_12k.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 12413
+  },
+  "docvqa_train_10k": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/InternVL_Chat_V12_SFT_Data/10percent_data/docvqa/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/ten_percent_docvqa_train_10k.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 10211
+  },
+  "geoqa+": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/InternVL_Chat_V12_SFT_Data/10percent_data/geoqa+/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/ten_percent_geoqa+.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 72318
+  },
+  "synthdog_en": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/InternVL_Chat_V12_SFT_Data/10percent_data/synthdog-en/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase4_percentile_60_70/ten_percent_synthdog_en.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 29765
+  }
+}

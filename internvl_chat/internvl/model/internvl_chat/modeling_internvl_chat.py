@@ -55,7 +55,7 @@ class InternVLChatModel(PreTrainedModel):
         self.downsample_ratio = config.downsample_ratio
         self.ps_version = config.ps_version
         self.llm_arch_name = config.llm_config.architectures[0]
-
+        
         logger.info(f'num_image_token: {self.num_image_token}')
         logger.info(f'ps_version: {self.ps_version}')
         if vision_model is not None:
@@ -65,17 +65,26 @@ class InternVLChatModel(PreTrainedModel):
         if language_model is not None:
             self.language_model = language_model
         else:
-            if config.llm_config.architectures[0] == 'LlamaForCausalLM':
-                self.language_model = LlamaForCausalLM(config.llm_config)
-            elif config.llm_config.architectures[0] == 'InternLM2ForCausalLM':
-                self.language_model = InternLM2ForCausalLM(config.llm_config)
-            elif config.llm_config.architectures[0] == 'Phi3ForCausalLM':
-                self.language_model = Phi3ForCausalLM(config.llm_config)
-            elif config.llm_config.architectures[0] == 'Qwen2ForCausalLM':
-                self.language_model = Qwen2ForCausalLM(config.llm_config)
+            if 'architectures' in config.llm_config:
+                if config.llm_config.architectures[0] == 'LlamaForCausalLM':
+                    self.language_model = LlamaForCausalLM(config.llm_config)
+                elif config.llm_config.architectures[0] == 'InternLM2ForCausalLM':
+                    self.language_model = InternLM2ForCausalLM(config.llm_config)
+                elif config.llm_config.architectures[0] == 'Phi3ForCausalLM':
+                    self.language_model = Phi3ForCausalLM(config.llm_config)
+                elif config.llm_config.architectures[0] == 'Qwen2ForCausalLM':
+                    self.language_model = Qwen2ForCausalLM(config.llm_config)
+                else:
+                    raise NotImplementedError(f'{config.llm_config.architectures[0]} is not implemented.')
             else:
-                raise NotImplementedError(f'{config.llm_config.architectures[0]} is not implemented.')
+                # Nếu không có 'architectures', thêm nó vào llm_config
+                logger.warning("No 'architectures' key in llm_config. Assuming Qwen2ForCausalLM architecture.")
+                # Thêm 'architectures' vào llm_config để đảm bảo nó có thể được sử dụng trong model
+                llm_config_with_arch = config.llm_config.copy()
+                llm_config_with_arch['architectures'] = ['Qwen2ForCausalLM']
+                self.llm_config = Qwen2ForCausalLM(**llm_config_with_arch)
 
+        
         vit_hidden_size = config.vision_config.hidden_size
         llm_hidden_size = config.llm_config.hidden_size
 
@@ -288,8 +297,8 @@ class InternVLChatModel(PreTrainedModel):
 
         tokenizer.padding_side = 'left'
         model_inputs = tokenizer(queries, return_tensors='pt', padding=True)
-        input_ids = model_inputs['input_ids'].cuda()
-        attention_mask = model_inputs['attention_mask'].cuda()
+        input_ids = model_inputs['input_ids'].to(self.language_model.device) 
+        attention_mask = model_inputs['attention_mask'].to(self.language_model.device) 
         eos_token_id = tokenizer.convert_tokens_to_ids(template.sep)
         generation_config['eos_token_id'] = eos_token_id
         generation_output = self.generate(
@@ -337,8 +346,8 @@ class InternVLChatModel(PreTrainedModel):
             query = query.replace('<image>', image_tokens, 1)
 
         model_inputs = tokenizer(query, return_tensors='pt')
-        input_ids = model_inputs['input_ids'].cuda()
-        attention_mask = model_inputs['attention_mask'].cuda()
+        input_ids = model_inputs['input_ids'].to(self.language_model.device) 
+        attention_mask = model_inputs['attention_mask'].to(self.language_model.device)
         generation_config['eos_token_id'] = eos_token_id
         generation_output = self.generate(
             pixel_values=pixel_values,

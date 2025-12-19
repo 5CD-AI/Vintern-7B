@@ -1,0 +1,51 @@
+{
+    "viet_wiki_address_dict_60k": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/dict_vocab_check/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/dict_vocab_check/viet_wiki_address_dict/viet_wiki_address_dict_60k.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  },
+  "handwriting_flash2": {
+    "root": "/data/llm/gg_search/viettay_clean/",
+    "annotation": "/data/llm/gg_search/Gemini_viettay/handwriting_100k_flash2.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  },
+    "ver_new_doc_v1": {
+    "root": "/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/new_ocr_dataset/ocr_doc3_gemini.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  },
+    "viet_ocr": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/new_ocr_dataset/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/new_ocr_dataset/viet_ocr_merged.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  },
+  "mc4": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/mc4_1000font_text.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 29765
+  },
+  "table_mardown": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/table_mardown.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 29765
+  },
+  "synthdog_en": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/InternVL_Chat_V12_SFT_Data/10percent_data/synthdog-en/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase5_percentile_80_90_expand_vi/ten_percent_synthdog_en.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 29765
+  }
+}

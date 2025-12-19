@@ -1,0 +1,37 @@
+{
+  "viet_self_correct": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/dict_vocab_check/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/dict_vocab_check/self_correct/viet_self_correct_40k.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  },
+  "viet_self_correct_think": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/dict_vocab_check/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/dict_vocab_check/self_correct_thinking/viet_self_correct_thinking.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  },
+    "viet_self_correct_accent": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/dict_vocab_check/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/dict_vocab_check/self_correct_accent/viet_self_correct_accent.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  },
+  "ocr_new": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/Doc_ocr_flash2/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/temp/viet_ocr_doc_doc2_flash2_2k.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  },
+  "mc4": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/temp/mc4_1000font_text.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 29765
+  }
+}

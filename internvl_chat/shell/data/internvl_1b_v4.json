@@ -1,0 +1,16 @@
+{
+    "viet_wiki_address_dict_60k": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/dict_vocab_check/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase5_percentile_80_90_expand_vi/viet_wiki_address_dict_60k.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  },
+  "ocr_new": {
+    "root": "/data/llm/Vintern-7B/internvl_chat/Doc_ocr_flash2/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/combine_vqa/vintern4b_10percent_phase5_percentile_80_90_expand_vi/viet_ocr_doc_doc2_flash2.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  }
+}

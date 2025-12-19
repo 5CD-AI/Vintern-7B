@@ -1,0 +1,9 @@
+{
+    "ver_new_doc_v1": {
+    "root": "/",
+    "annotation": "/data/llm/Vintern-7B/internvl_chat/new_ocr_dataset/ocr_doc3_gemini.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 82995
+  }
+}
